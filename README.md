@@ -1,4 +1,4 @@
-# Laravel Rever Chat App Testing
+# Laravel Reverb Chat App Testing
 
 
 ## Setup 
