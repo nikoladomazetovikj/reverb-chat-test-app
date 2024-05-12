@@ -33,6 +33,8 @@ watchEffect(() => {
     console.log(messages)
   };
 
+
+
   messagesChannel.listen('SendMessage', (e) => {
     handleNewMessage(e);
   });
@@ -48,13 +50,13 @@ const sendMessage = () => {
       sender_id: 1,
       users: {
         user1: {
-          name: "Test",
+          name: "John",
           id: 1,
           avatar: "img",
           role: "Admin"
         },
         user2: {
-          name: "Test",
+          name: "Jane",
           id: 2,
           avatar: "img",
           role: "Employee"
@@ -76,7 +78,7 @@ const sendMessage = () => {
   <div>
     <ul>
       <li v-for="(message, index) in messages" :key="index">
-        <strong>{{ message.senderName }} {{ message.senderSurname }}:</strong> {{ message.message }}
+        <strong>{{ message.users[`user${message.sender_id}`].name }}:</strong> {{ message.message }}
       </li>
     </ul>
     <input type="text" v-model="newMessage" />
