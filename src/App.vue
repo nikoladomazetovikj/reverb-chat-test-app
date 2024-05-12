@@ -29,7 +29,8 @@ const messagesChannel = echo.private(conversationId);
 
 watchEffect(() => {
   const handleNewMessage = (data) => {
-    console.log(data)
+    messages.value.push(data.data);
+    console.log(messages)
   };
 
   messagesChannel.listen('SendMessage', (e) => {
