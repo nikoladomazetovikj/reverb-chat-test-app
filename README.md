@@ -1,7 +1,23 @@
-# Vue 3 + Vite
+# Laravel Rever Chat App Testing
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-## Recommended IDE Setup
+## Setup 
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+Install `npm` packages:
+
+```bash
+npm install
+```
+
+Create `.env` file
+```bash
+cp .env.example .env
+```
+
+Setup   reverb` configuration in the `.env` file 
+
+```dotenv
+VITE_CHAT_ID=your_channel_name
+VITE_BEARER=your_auth_bearer_token
+VITE_BASE_URL=api_server_base_url
+```
